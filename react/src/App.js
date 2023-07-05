@@ -12,6 +12,8 @@ function App() {
     <Router>
         <Routes>
           <Route path="/" element={<Pocetna />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/welcome" element={<Welcome />} />
         </Routes>
       </Router>
 
