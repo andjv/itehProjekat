@@ -6,6 +6,8 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Pocetna = () => {
 
+
+    const navigate = useNavigate()
     if (localStorage.getItem('email'))
         navigate('/welcome')
 
@@ -14,7 +16,7 @@ const Pocetna = () => {
         password: ''
     });
 
-    const navigate = useNavigate()
+    
 
 
 

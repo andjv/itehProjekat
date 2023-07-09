@@ -26,13 +26,13 @@ const Welcome = () => {
 
 
     return (
-        <div>
 
-            <h1 id="wtt">Welcome to the IT-SPACE-DEV system!</h1>
-
-            <button onClick={logout} className="btn btn-dark" id="lgt">LOG OUT</button>
-
+        <div className="d-flex align-items-center justify-content-center m-5">
+            <h1>Welcome to the IT-SPACE-DEV system!</h1>
+            <button id="admin-logout-button" onClick={logout} class="btn btn-dark">LOG OUT</button>
         </div>
+
+        
     )
 }
 

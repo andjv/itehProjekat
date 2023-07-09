@@ -24,11 +24,16 @@ const Nav = () => {
 
     return (
         <div>
-            <nav className="nav-m">
+            <nav className="d-flex align-items-center justify-content-center m-5">
                 <Link to="/prisustva" className='nav-m-link'>Prisustva</Link>
                 <Link to="/kasnjenja" className='nav-m-link'>Kašnjenja</Link>
                 <Link to="/zaposleni" className='nav-m-link'>Zaposleni</Link>
-                <button onClick={logout} className="btn btn-dark" id="admin-logout-button">LOG OUT</button>
+                
+                
+                <div className="d-flex align-items-center justify-content-center m-5">
+                    <button onClick={logout} className="btn btn-dark" id="admin-logout-button">LOG OUT</button>
+                </div>
+            
             </nav>
         </div>
     )
