@@ -18,6 +18,8 @@ function App() {
           <Route path="/" element={<Pocetna />} />
           <Route path="/register" element={<Register />} />
           <Route path="/welcome" element={<Welcome />} />
+
+          <Route path="/admin-dashboard" element={<Prisustva />} />
           <Route path="/prisustva" element={<Prisustva />} />
           <Route path="/kasnjenja" element={<Kasnjenja />} />
           <Route path="/zaposleni" element={<Zaposleni />} />
