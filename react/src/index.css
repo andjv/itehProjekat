@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo', serif;
+}
+
+.dlogin {
+  width: 500px;
+  margin-top: 150px;
+  margin-left: 700px;
+}
+
+.dloginfield {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+#it-space-dev{
+  font-size: 60px;
+  margin-top: 30px;
+  margin-left: 740px;
+}
+
+.dreg {
+  width: 500px;
+  margin-top: 50px;
+  margin-left: 700px;
+}
+
+#reg{
+  color: #999999;
+}
+
+#wtt{
+  margin-left: 280px;
+  margin-top: 200px;
+  font-size: 70px;
+}
+
+#lgt{
+  width: 250px;
+  font-size: 40px;
+  margin-left: 800px;
+  margin-top: 40px;
+}
+
+.nav-m {
+  padding-top: 20px;
+  padding-left: 650px;
+}
+
+.nav-m-link{
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.prisustva-t{
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 220px;
+}
+
+#p-n{
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: 650px;
+}
+
+#src {
+  width: 500px;
+  margin-left: 515px;
+  margin-bottom: -12px;
+}
+
+#sort-button{
+  margin-top: -90px;
+  margin-left: 1040px;
+  width: 200px;
+  margin-bottom: -50px;
+}
+
+#admin-logout-button{
+  font-size: 22px;
+  margin-top: -17px;
+  margin-left: 450px;
+}
