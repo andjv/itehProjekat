@@ -20,7 +20,7 @@ class EvidencijaKontroler extends Controller
         $date2->setTimezone(new DateTimeZone('Europe/Belgrade'));
         $date2->setTime(8, 30);
 
-        
+
 
 
         $loginTime = new DateTime();
@@ -56,7 +56,7 @@ class EvidencijaKontroler extends Controller
 
     public function prisustva()
     {
-        $prisustva = DB::table('prisustva')->join('zaposleni', 'zaposleni.id', '=', 'prisustva.zaposleni_id')->get();
+        $prisustva = DB::table('prisustva')->join('zaposleni', 'zaposleni.id', '=', 'prisustva.zaposleni_id')->where('first_name', 'not like', 'admin')->get();
 
         return response()->json([
             'status' => 200,
@@ -69,7 +69,7 @@ class EvidencijaKontroler extends Controller
 
     public function kasnjenja()
     {
-        $kasnjenja = DB::table('kasnjenja')->join('zaposleni', 'zaposleni.id', '=', 'kasnjenja.zaposleni_id')->get();
+        $kasnjenja = DB::table('kasnjenja')->join('zaposleni', 'zaposleni.id', '=', 'kasnjenja.zaposleni_id')->where('first_name', 'not like', 'admin')->get();
 
         return response()->json([
             'status' => 200,

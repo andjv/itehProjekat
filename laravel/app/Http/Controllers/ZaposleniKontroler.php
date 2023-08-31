@@ -10,7 +10,9 @@ class ZaposleniKontroler extends Controller
 {
     public function zaposleni()
     {
-        $zaposleni = DB::table('zaposleni')->get();
+        $zaposleni = DB::table('zaposleni')
+            ->where('first_name', 'not like', 'admin')
+            ->get();
 
         return response()->json([
             'status' => 200,
@@ -23,10 +25,8 @@ class ZaposleniKontroler extends Controller
     public function zaposleniSearch($input)
     {
         $zaposleni = DB::table('zaposleni')
-            ->where('first_name', 'like', "%$input%")
-            ->orWhere('last_name', 'like', "%$input%")
-            ->orWhere('email', 'like', "%$input%")
-            ->orWhere('phone_number', 'like', "%$input%")
+            ->where('first_name', 'like', "$input%")
+            ->where('first_name', 'not like', 'admin')
             ->get();
 
         return response()->json([
@@ -41,6 +41,7 @@ class ZaposleniKontroler extends Controller
     public function zaposleniSort($sortiranje)
     {
         $zaposleni = DB::table('zaposleni')
+            ->where('first_name', 'not like', 'admin')
             ->orderBy('kasnjenja', $sortiranje)
             ->get();
 

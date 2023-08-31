@@ -1,21 +1,17 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import Nav from '../komponente/Nav';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Nav from "../komponente/Nav";
 
 const Prisustva = () => {
-
-    const [prisustva, setPrisustva] = useState([])
+    const [prisustva, setPrisustva] = useState([]);
 
     useEffect(() => {
-
-        axios.get("http://localhost:8000/api/prisustva").then(res => {
-            setPrisustva(res.data.prisustva)
+        axios.get("http://localhost:8000/api/prisustva").then((res) => {
+            setPrisustva(res.data.prisustva);
         });
-
     }, []);
 
-
-    var body = '';
+    var body = "";
     body = prisustva.map((p) => {
         return (
             <tr key={p.id}>
@@ -25,23 +21,17 @@ const Prisustva = () => {
                 <td>{p.phone_number}</td>
                 <td>{p.prijava}</td>
             </tr>
-        )
-    })
-
-
-
+        );
+    });
 
     return (
         <div>
-
             <Nav />
 
-            <div className='prisustva-t'>
-
-                <h1 id='p-n'>Prisustva</h1>
+            <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <h1 className="p-4">Prisustva</h1>
 
                 <table className="table table-primary text-center">
-
                     <thead>
                         <tr>
                             <th>Ime</th>
@@ -52,14 +42,11 @@ const Prisustva = () => {
                         </tr>
                     </thead>
 
-                    <tbody>
-                        {body}
-                    </tbody>
-
+                    <tbody>{body}</tbody>
                 </table>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Prisustva;
